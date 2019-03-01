@@ -1,8 +1,8 @@
 import unittest
-from python.src.server import Server
+from src.server import Server
 
 
-class ServerTest(unittest.TestCase):
+class TestServer(unittest.TestCase):
 
     def test_something(self):
         s = Server()
