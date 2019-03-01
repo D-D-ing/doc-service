@@ -1,0 +1,24 @@
+pipeline {
+    stages {
+        stage('Unit-Test') {
+            steps {
+               echo "Sometimes we will test something"
+            }
+          post {
+            echo "junit 'results.xml'"
+            }
+          }
+        stage('Build') {
+            steps {
+                sh "sudo docker build -t doc_server:latest src/."
+            }
+        }
+
+
+        stage('Deploy') {
+            steps {
+            echo "Sometimes we will deploy something..."
+            }
+        }
+    }
+}

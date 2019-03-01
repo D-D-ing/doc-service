@@ -1,6 +1,7 @@
 import unittest
 from python.src.server import Server
 
+
 class ServerTest(unittest.TestCase):
 
     def test_something(self):
