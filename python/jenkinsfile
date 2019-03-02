@@ -4,8 +4,8 @@ pipeline {
         stage('Unit-Test') {
             steps {
                echo "Run unit-tests:"
-               sh docker-compose build test
-               sh docker run 'doc-service_test:latest'
+               sh "docker-compose build test"
+               sh "docker run doc-service_test:latest"
             }
           post {
                 always  {
