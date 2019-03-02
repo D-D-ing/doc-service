@@ -3,10 +3,14 @@ pipeline {
     stages {
         stage('Unit-Test') {
             steps {
-               echo "Sometimes we will test something"
+               echo "Run unit-tests:"
+               sh docker-compose build test
+               sh docker run doc-service_test:latest
             }
           post {
-            echo "junit 'results.xml'"
+                always  {
+                junit 'results/results.xml'
+            }
             }
           }
         stage('Build') {

@@ -5,4 +5,4 @@ services:
       context: .
       dockerfile: ./docker/test/Dockerfile
     volumes:
-     - /Users/Vincent/CodeProjects/docker/ka:/app/results
+     - results:/app/results
