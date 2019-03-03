@@ -5,7 +5,7 @@ pipeline {
             steps {
                echo "Run unit-tests:"
                sh "mkdir -p results"
-               sh "docker-compose build test"
+               sh "docker-compose --project-name doc-service build test"
                sh "docker run doc-service_test:latest"
             }
           post {
