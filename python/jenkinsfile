@@ -4,7 +4,7 @@ pipeline {
         stage('Unit-Test') {
             steps {
                echo "Run unit-tests:"
-               sh "mkdir results"
+               sh "mkdir -p results"
                sh "docker-compose build test"
                sh "docker run doc-service_test:latest"
             }
